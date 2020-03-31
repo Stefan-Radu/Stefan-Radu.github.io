@@ -1,0 +1,20 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#home-header-msg {
+  margin: 0;
+}
+
+.home-bg-img {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url("images/home_background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
