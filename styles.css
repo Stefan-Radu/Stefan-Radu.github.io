@@ -92,7 +92,8 @@ html, body {
   padding: 0;
   margin: 0;
   height: 75%;
-  background-image: url("images/bg1.jpg");
+  /* background-image: url("images/bg1.jpg"); */
+  background-color: #191919;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -100,9 +101,10 @@ html, body {
 #home-bottom-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
   margin: 1%;
-  width: 60%;
+  max-width: 60%;
   height: 80%;
   background-color: #fff;
   border: 5px solid #fff;
@@ -114,8 +116,11 @@ html, body {
   max-height: 90%;
   width: auto;
   overflow: auto;
-  padding: 5% 10% 0 10%;
-  overflow: hidden;
+  padding: 10% 10% 0 10%;
+}
+
+#home-bottom-container div:nth-child(1)::-webkit-scrollbar {
+  display: none;
 }
 
 #home-bottom-container div:nth-child(1) h2 {
