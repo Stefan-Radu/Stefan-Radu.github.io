@@ -31,14 +31,15 @@ html, body {
 .page-nav {
   list-style-type: none;
   margin: 0;
-  padding: 3%;
+  padding: 2%;
   text-align: center;
   min-height: 0;
 }
 
 .page-nav li {
   display: inline-block;
-  margin: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .page-nav a {
