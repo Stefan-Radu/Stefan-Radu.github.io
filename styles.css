@@ -1,20 +1,110 @@
+/* =========================== general =======================*/
+
 html, body {
-  height: 100%;
   margin: 0;
   padding: 0;
-}
-
-#home-header-msg {
-  margin: 0;
-}
-
-.home-bg-img {
   height: 100%;
+  font-family: Courier, Monospace;
+}
+
+/* =========================== header =======================*/
+
+.page-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 25%;
+  position: sticky;
+  overflow: hidden;
+}
+
+.stef-h1 {
+  padding: 3%;
   margin: 0;
+  font-weight: bold;
+  text-align: center;
+  min-height: 0;
+}
+
+/* =========================== header-nav =======================*/
+
+.page-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 3%;
+  text-align: center;
+  min-height: 0;
+}
+
+.page-nav li {
+  display: inline-block;
+  margin: 5px;
+}
+
+.page-nav a {
+  text-decoration: none;
+  font-size: 1.2em;
+  color: black;
+  font-weight: bold;
+  opacity: 0.65;
+}
+
+.page-nav a:before {
+  content: "[ ";
+}
+
+.page-nav a:after {
+  content: " ]";
+}
+
+.page-nav a:before,
+.page-nav a:after {
+  opacity: 0;
+}
+
+.page-nav a.active:before,
+.page-nav a.active:after {
+  opacity: 0.8;
+}
+
+.page-nav a.active {
+  color: #560963;
+}
+
+.page-nav a:hover:before,
+.page-nav a:hover:after {
+  opacity: 0.8;
+  transition: 0.5s;
+}
+
+.page-nav a:hover {
+  opacity: 0.8;
+  transition: 0.27s;
+}
+
+/* =========================== home-bottom =======================*/
+
+.page-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
   padding: 0;
-  background-image: url("images/home_background.jpg");
+  margin: 0;
+  height: 75%;
+  background-image: url("images/bg1.jpg");
   background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
-  position: relative;
+}
+
+.page-bottom h1 {
+  padding: 0;
+  margin: 0;
+}
+
+#home-bottom-container {
+  margin: 10px;
+  width: 50%;
+  height: 80%;
+  background-color: #fff;
 }
