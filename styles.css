@@ -267,18 +267,13 @@ header {
   color: #250173;
 }
 
-#home-container div:nth-child(2) {
+#home-container footer {
   height: 10%;
   width: 100%;
   text-align: center;
 }
 
-#home-container div:nth-child(2) a {
-  display: inline-block;
-  height: 100%;
-}
-
-#home-container div:nth-last-child(1) img{
+#home-container footer img{
   height: 100%;
 }
 
