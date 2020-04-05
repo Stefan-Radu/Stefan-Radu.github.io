@@ -26,7 +26,6 @@ body {
 
 .img {
   float: left;
-  margin-right: 1.5vw;
   background-size: cover;
   background-position: center;
 }
@@ -333,16 +332,10 @@ header {
 .project .img {
   height: 9vh;
   width: 9vh;
+  margin-right: 1.5vw;
   border-radius: 50%;
+  background-image: url("images/apus.jpeg");
 }
-
-#om-munte { background-image: url("images/omu-muntelui.jpeg"); }
-#apus { background-image: url("images/apus.jpeg"); }
-#van { background-image: url("images/van.jpeg"); }
-#undeva { background-image: url("images/undeva.jpeg"); }
-#mg.mar { background-image: url("images/mar.jpeg"); }
-#buna-rau { background-image: url("images/buna-rau.jpeg"); }
-#ceai { background-image: url("images/ceai.jpeg"); }
 
 .project span:nth-child(2) {
   display: flex;
@@ -398,6 +391,7 @@ header {
 .blog-entrie .img {
   height: 9vh;
   width: 9vh;
+  margin-right: 1.5vw;
   border-radius: 50%;
 }
 
