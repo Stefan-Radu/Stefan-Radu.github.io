@@ -480,8 +480,9 @@ header {
   background-color: #fff;
 }
 
-.blog-post-body p {
-  margin-top: 5%;
+.blog-post-body section {
+  margin-top: 2%;
+  margin-bottom: 2%;
   width: 80vw;
 }
 
@@ -490,7 +491,7 @@ header {
 /* =========================== responsive =======================*//*{{{*/
 
 @media only screen and (max-width: 1000px) {
-  header, .main-title {
+  header, .main-title, .blog-post-body {
     font-size: 18px;
   }
 
@@ -500,7 +501,7 @@ header {
 }
 
 @media only screen and (max-width: 800px) {
-  header, .main-title  {
+  header, .main-title, .blog-post-body {
     font-size: 16px;
   }
 
@@ -518,7 +519,7 @@ header {
 }
 
 @media only screen and (max-width: 600px) {
-  header, .main-title {
+  header, .main-title, .blog-post-body {
     font-size: 14px;
   }
 
@@ -541,7 +542,7 @@ header {
 }
 
 @media only screen and (max-width: 400px) {
-  header, .main-title {
+  header, .main-title, .blog-post-body {
     font-size: 12px;
   }
 
