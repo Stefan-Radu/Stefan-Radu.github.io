@@ -19,15 +19,57 @@ body {
 }
 
 .main-body {
-  min-height: 80vh;
-  height: auto;
+  height: 80vh;
   width: 100%;
+  overflow-y: auto;
+  scroll-behavior: smooth;
 }
+
+.main-body::-webkit-scrollbar { display: none; }
 
 .img {
   float: left;
   background-size: cover;
   background-position: center;
+}
+
+.entries {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.entrie {
+  color: #fff;
+  opacity: 0.6;
+  height: auto;
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity 0.27s ease-in-out;
+}
+
+.entrie:hover {
+  opacity: 1;
+}
+
+.entrie .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.entrie .title {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.entrie .date {
+  font-size: 0.8em;
+  font-weight: normal;
+  color: #bea1ff;
 }
 
 /* =========================== main-title =======================*//*{{{*/
@@ -270,7 +312,8 @@ header {
   opacity: 0.8;
   font-size: 1.27em;
   position: relative;
-  transition: all 0.15s ease-in-out;
+  text-decoration: none;
+  transition: opacity 0.15s ease-in-out, font-size 0.15s ease-in-out;
 }
 
 .projects-nav a:before,
@@ -300,92 +343,61 @@ header {
 
 /*}}}*/
 
+.projects-separator {
+  height: 15vw;
+  width: 100%;
+}
+
 .projects {
   width: 100%;
   height: auto;
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .project {
-  color: #fff;
-  opacity: 0.6;
-  height: auto;
+  max-height: 30vh;
   min-width: 60vw;
-  margin: 3vh 0 3vh 0;
-  transition: all 0.27s ease-in-out;
-}
-
-.project:hover {
-  opacity: 1;
-}
-
-.project a {
-  color: #fff;
-  cursor: pointer;
-  text-decoration: none;
+  max-width: 70vw;
+  margin: 10vw 0 10vw 0;
 }
 
 .project .img {
-  height: 9vh;
-  width: 9vh;
-  margin-right: 1.5vw;
-  border-radius: 50%;
-  background-image: url("images/apus.jpeg");
+  height: 20vw;
+  width: 20vw;
+  margin-right: 3vw;
+  border-radius: 20%;
 }
 
-.project span:nth-child(2) {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
+.project .content {
+  justify-content: flex-start;
+  height: 20vw;
+  width: auto;
+  overflow-y: auto;
 }
 
-.project .title {
-  font-size: 1.4em;
-  font-weight: bold;
+.project .content::-webkit-scrollbar { display: none; }
+
+.project .description {
+  margin-top: 3vh;
 }
 
-.project .date {
-  font-size: 0.8em;
-  font-weight: normal;
-  color: #bea1ff;
-}
+#pp .img { background-image: url("images/p&p.jpeg") }
+#quotes .img { background-image: url("images/quotes.jpg") }
+#lissa .img { background-image: url("images/lissa.png") }
+#fireworks .img { background-image: url("images/fireworks.jpeg") }
+#snake .img { background-image: url("images/snake.png") }
+#matrix .img { background-image: url("images/matrix.jpg") }
 
 /*}}}*/
 
 /* =========================== blog-body =======================*//*{{{*/
 
 .blog-entries {
-  width: 100%;
-  height: auto;
   min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .blog-entrie {
-  color: #fff;
-  opacity: 0.6;
-  height: auto;
   min-width: 60vw;
   margin: 3vh 0 3vh 0;
-  transition: all 0.27s ease-in-out;
-}
-
-.blog-entrie:hover {
-  opacity: 1;
-}
-
-.blog-entrie a {
-  color: #fff;
-  cursor: pointer;
-  text-decoration: none;
 }
 
 .blog-entrie .img {
@@ -395,31 +407,17 @@ header {
   border-radius: 50%;
 }
 
+.blog-entrie .content {
+  height: 9vh;
+}
+
 #om-munte { background-image: url("images/omu-muntelui.jpeg"); }
 #apus { background-image: url("images/apus.jpeg"); }
 #van { background-image: url("images/van.jpeg"); }
 #undeva { background-image: url("images/undeva.jpeg"); }
-#mg.mar { background-image: url("images/mar.jpeg"); }
+#mar { background-image: url("images/mar.jpeg"); }
 #buna-rau { background-image: url("images/buna-rau.jpeg"); }
 #ceai { background-image: url("images/ceai.jpeg"); }
-
-.blog-entrie span:nth-child(2) {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-}
-
-.blog-entrie .title {
-  font-size: 1.4em;
-  font-weight: bold;
-}
-
-.blog-entrie .date {
-  font-size: 0.8em;
-  font-weight: normal;
-  color: #bea1ff;
-}
 
 /*}}}*/
 
@@ -485,6 +483,10 @@ header {
 
   .blog-entry .img {
     width: 7vh;
+    height: 7vh;
+  }
+
+  .blog-entry .content {
     height: 7vh;
   }
 }
