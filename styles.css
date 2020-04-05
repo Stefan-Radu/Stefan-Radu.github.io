@@ -24,6 +24,13 @@ body {
   width: 100%;
 }
 
+.img {
+  float: left;
+  margin-right: 1.5vw;
+  background-size: cover;
+  background-position: center;
+}
+
 /* =========================== main-title =======================*//*{{{*/
 
 .main-title {
@@ -238,15 +245,10 @@ header {
 
 /* =========================== projects-body =======================*//*{{{*/
 
-.main-body.projects {
-  display: flex;
-  flex-direction: column;
-}
-
 /* =========================== projects-body-nav ======================= *//*{{{*/
 
-.main-body.projects .projects-nav {
-  height: 60vh;
+.projects-nav {
+  min-height: 60vh;
   width: 100%;
   list-style-type: none;
   display: flex;
@@ -257,14 +259,14 @@ header {
   margin: 0;
 }
 
-.projects .projects-name1 {
+.projects-nav li {
   width: auto;
   font-weight: bold;
   text-align: left;
   margin: 1.5vh 0 1.5vh 7vw; 
 }
 
-.projects-name1 a {
+.projects-nav a {
   color: #fff;
   opacity: 0.8;
   font-size: 1.27em;
@@ -272,8 +274,8 @@ header {
   transition: all 0.15s ease-in-out;
 }
 
-.projects-name1 a:before,
-.projects-name1 a:after {
+.projects-nav a:before,
+.projects-nav a:after {
   left: 0;
   opacity: 0;
   content: "";
@@ -285,19 +287,80 @@ header {
   transition: all 0.3s ease-in-out;
 }
 
-.projects-name1 a:hover {
+.projects-nav a:hover {
   font-size: 1.7em;
   cursor: pointer;
   opacity: 1;
 }
 
-.projects-name1 a:hover:after,
-.projects-name1 a:hover:before {
+.projects-nav a:hover:after,
+.projects-nav a:hover:before {
   width: 100%;
   opacity: 0.9;
 }
 
 /*}}}*/
+
+.projects {
+  width: 100%;
+  height: auto;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project {
+  color: #fff;
+  opacity: 0.6;
+  height: auto;
+  min-width: 60vw;
+  margin: 3vh 0 3vh 0;
+  transition: all 0.27s ease-in-out;
+}
+
+.project:hover {
+  opacity: 1;
+}
+
+.project a {
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.project .img {
+  height: 9vh;
+  width: 9vh;
+  border-radius: 50%;
+}
+
+#om-munte { background-image: url("images/omu-muntelui.jpeg"); }
+#apus { background-image: url("images/apus.jpeg"); }
+#van { background-image: url("images/van.jpeg"); }
+#undeva { background-image: url("images/undeva.jpeg"); }
+#mg.mar { background-image: url("images/mar.jpeg"); }
+#buna-rau { background-image: url("images/buna-rau.jpeg"); }
+#ceai { background-image: url("images/ceai.jpeg"); }
+
+.project span:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.project .title {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.project .date {
+  font-size: 0.8em;
+  font-weight: normal;
+  color: #bea1ff;
+}
 
 /*}}}*/
 
@@ -332,25 +395,19 @@ header {
   text-decoration: none;
 }
 
-.entry-img {
-  float: left;
+.blog-entrie .img {
   height: 9vh;
   width: 9vh;
-  margin-right: 1.5vw;
   border-radius: 50%;
-  background-image: url("images/apus.jpeg");
-  background-size: cover;
-  background-position: center;
 }
 
-.entry-img.om-munte { background-image: url("images/omu-muntelui.jpeg"); }
-.entry-img.apus { background-image: url("images/apus.jpeg"); }
-.entry-img.van { background-image: url("images/van.jpeg"); }
-.entry-img.undeva { background-image: url("images/undeva.jpeg"); }
-.entry-img.mar { background-image: url("images/mar.jpeg"); }
-.entry-img.buna-rau { background-image: url("images/buna-rau.jpeg"); }
-.entry-img.ceai { background-image: url("images/ceai.jpeg"); }
-
+#om-munte { background-image: url("images/omu-muntelui.jpeg"); }
+#apus { background-image: url("images/apus.jpeg"); }
+#van { background-image: url("images/van.jpeg"); }
+#undeva { background-image: url("images/undeva.jpeg"); }
+#mg.mar { background-image: url("images/mar.jpeg"); }
+#buna-rau { background-image: url("images/buna-rau.jpeg"); }
+#ceai { background-image: url("images/ceai.jpeg"); }
 
 .blog-entrie span:nth-child(2) {
   display: flex;
@@ -410,12 +467,11 @@ header {
     width: 45vw;
   }
 
-  .main-body.projects ul {
+  .projects-nav {
     align-items: center;
   }
 
-  .main-body.projects li {
-    align-items: center;
+  .projects-nav li {
     margin-left: 0;
   }
 }
