@@ -273,6 +273,11 @@ header {
   text-align: center;
 }
 
+#home-container footer a {
+  display: inline-block;
+  height: 100%;
+}
+
 #home-container footer img{
   height: 100%;
 }
