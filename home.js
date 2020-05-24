@@ -225,7 +225,6 @@ async function animationLoop() {
   }
 
   if (circlesLastIndex <= 0) {
-    await new Promise(r => setTimeout(r, 500));
     update();
     index = (index + 1) % messages.length;
   }
