@@ -225,6 +225,7 @@ async function animationLoop() {
   }
 
   if (circlesLastIndex <= 0) {
+    await new Promise(r => setTimeout(r, 700));
     update();
     index = (index + 1) % messages.length;
   }
@@ -238,7 +239,21 @@ function displayMessage() {
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
   ctx.fillStyle = "white";
-  ctx.font = "9vw Courier";
+
+  console.log(canvas.width);
+  if (window.matchMedia("(min-width: 1000px)").matches) {
+    ctx.font = "10vw Courier";
+  }
+  else if (window.matchMedia("(min-width: 800px)").matches) {
+    ctx.font = "16vw Courier";
+  }
+  else if (window.matchMedia("(min-width: 600px)").matches) {
+    ctx.font = "18vw Courier";
+  }
+  else {
+    ctx.font = "20vw Courier";
+  }
+
   ctx.textAlign = "center";
   ctx.fillText(messages[index], canvas.width / 2, canvas.height / 2);
 }
