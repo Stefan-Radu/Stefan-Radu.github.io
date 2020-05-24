@@ -242,7 +242,7 @@ function displayMessage() {
 
   console.log(canvas.width);
   if (window.matchMedia("(min-width: 1000px)").matches) {
-    ctx.font = "10vw Courier";
+    ctx.font = "9vw Courier";
   }
   else if (window.matchMedia("(min-width: 800px)").matches) {
     ctx.font = "16vw Courier";
