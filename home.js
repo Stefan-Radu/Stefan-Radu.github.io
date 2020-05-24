@@ -226,7 +226,7 @@ async function animationLoop() {
 
   if (circlesLastIndex <= 0) {
     await new Promise(r => setTimeout(r, 700));
-    update();
+    await update();
     index = (index + 1) % messages.length;
   }
 
@@ -240,7 +240,6 @@ function displayMessage() {
 
   ctx.fillStyle = "white";
 
-  console.log(canvas.width);
   if (window.matchMedia("(min-width: 1000px)").matches) {
     ctx.font = "9vw Courier";
   }
@@ -258,7 +257,7 @@ function displayMessage() {
   ctx.fillText(messages[index], canvas.width / 2, canvas.height / 2);
 }
 
-function init() {
+async function init() {
 
   canvas = document.getElementById("home-canvas");
   ctx = canvas.getContext("2d");
@@ -268,9 +267,9 @@ function init() {
   ctx.fillStyle = CLEAR_COLOR;
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-  window.addEventListener("resize", () => {
+  window.addEventListener("resize", async () => {
     fixDpi();
-    update();
+    await update();
   }, true);
 
   initPoints();
@@ -303,7 +302,7 @@ function randomize() {
   circlesLastIndex = circles.length - 1;
 }
 
-function update() {
+async function update() {
 
   if (index == 0) {
     randomize();
