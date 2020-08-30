@@ -7,15 +7,15 @@ let diagonal = null;
 let secondsPassed = 0;
 let oldTimeStamp = 0;
 
-const CIRCLE_CNT = 1500;
+const CIRCLE_CNT = 1000;
 let circles =  null;
 let circlesLastIndex = 0;
 
 const CLEAR_COLOR = "#191919"
 
 let index = 1;
-let messages = ['', 'Hi there', 'I\'m Stefan', 'I like coding',
-  'and weird stuff', 'and Vim', 'and you', 'so hire me']; 
+let messages = ['', 'stay curious', 'seek challenge', 'surpass',
+  'every limit', 'love Vim', 'Stef.']; 
 
 class Vector2d {//{{{
   constructor(x, y) {
