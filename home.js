@@ -7,15 +7,15 @@ let diagonal = null;
 let secondsPassed = 0;
 let oldTimeStamp = 0;
 
-const CIRCLE_CNT = 1250;
+const CIRCLE_CNT = 1500;
 let circles =  null;
 let circlesLastIndex = 0;
 
 const CLEAR_COLOR = "#191919"
 
 let index = 1;
-let messages = ['', 'Hi I\'m Stefan', 'a student', 'a programmer',
-                'a tech enthusiast', 'a dreamer', 'a wonderer']; 
+let messages = ['', 'Hi there', 'I\'m Stefan', 'I like coding',
+  'and weird stuff', 'and Vim', 'and you', 'so hire me']; 
 
 class Vector2d {//{{{
   constructor(x, y) {
@@ -279,7 +279,7 @@ function initPoints() {
   circles = [];
   let target = null;
   for (let i = 0; i < CIRCLE_CNT; ++ i) {
-    target = new Vector2d(randInt(canvas.width * 6) - canvas.width * 3, randInt(canvas.height * 6) - canvas.height * 3);
+    target = new Vector2d(randInt(canvas.width * 7) - canvas.width * 3, randInt(canvas.height * 7) - canvas.height * 3);
     let c = new Circle(target);
     c.position = target;
     circles.push(c);
@@ -293,7 +293,7 @@ function randomize() {
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
   for (circle of circles) {
-    let pos = new Vector2d(randInt(canvas.width * 6) - canvas.width * 3, randInt(canvas.height * 6) - canvas.height  * 3);
+    let pos = new Vector2d(randInt(canvas.width * 7) - canvas.width * 3, randInt(canvas.height * 7) - canvas.height  * 3);
     let pixel = ctx.getImageData(pos.x, pos.y, 1, 1).data;
     circle.target = pos;
     circle.targetColor = pixel.slice(0, 3);
@@ -314,7 +314,7 @@ async function update() {
   for (circle of circles) {
     let pos = new Vector2d(randInt(canvas.width), randInt(canvas.height));
     let pixel = ctx.getImageData(pos.x, pos.y, 1, 1).data;
-    while (brightness(pixel) < 57) {
+    while (brightness(pixel) < 27) {
       pos = new Vector2d(randInt(canvas.width), randInt(canvas.height));
       pixel = ctx.getImageData(pos.x, pos.y, 1, 1).data;
     }
