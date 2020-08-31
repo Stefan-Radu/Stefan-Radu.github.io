@@ -15,7 +15,7 @@ const CLEAR_COLOR = "#191919"
 
 let index = 1;
 let messages = ['', 'stay curious', 'seek challenge', 'surpass',
-  'every limit', 'love Vim', 'Stef.']; 
+  'every limit', 'code in Vim', 'Stef.']; 
 
 class Vector2d {//{{{
   constructor(x, y) {
@@ -79,7 +79,7 @@ class Circle {//{{{
     this.position = new Vector2d(Math.random() * canvas.width, Math.random() * canvas.height);
     this.velocity = new Vector2d((Math.random() - 0.5) * 27, (Math.random() - 0.5) * 27);
     this.acceleration = new Vector2d(0, 0);
-    this.radius = Math.random() * 4 + 2;
+    this.radius = randInt(5) + 3;
     this.targetColor = [25, 25, 25];
     this.color = [25, 25, 25];
   }
