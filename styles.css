@@ -421,8 +421,10 @@ footer img {
 /* =========================== extra =======================*//*{{{*/
 
 .up-button {
-  width: 40px;
-  height: 40px;
+  width: 3vw;
+  height: 3vw;
+  max-width: 40px;
+  max-height: 40px;
   position: fixed;
   right: 2vw;
   bottom: 2vh;
@@ -437,6 +439,8 @@ footer img {
   font-size: 0.7em;
   font-weight: bold;
   cursor: pointer;
+  margin: 0;
+  padding: 0;
 }
 
 /*}}}*/
