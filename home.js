@@ -14,7 +14,7 @@ let circlesLastIndex = 0;
 const CLEAR_COLOR = "#191919"
 
 let index = 1;
-let messages = ['', 'Hi', 'I\'m Stefan', 'a student', 'a dreamer',
+let messages = ['', 'Hi there!', 'I\'m Stefan', 'a student', 'a dreamer',
   'a problem solver', 'can you', 'challenge me?', 'Stef.']; 
 
 class Vector2d {//{{{
